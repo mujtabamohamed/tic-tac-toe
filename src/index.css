@@ -1,0 +1,223 @@
+body {
+  background-color: #000;
+  color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.app {  
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  flex-direction: column;  
+}
+
+.winning-message {
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.gameboard {
+  width: 600px;
+  height: 600px;
+  display: flex;
+  flex-wrap: wrap;
+  border: solid 1px #444;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  background-color: #121212;
+}
+
+.square {
+  width: 200px;
+  height: 200px;
+  border: solid 2px #333;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s;  
+}
+
+.square:hover {
+  background-color: #1f1f1f;
+}
+
+.circle  {
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+  border: 12px solid #fff;
+  box-sizing: border-box;
+}
+
+.cross  {
+  height: 120px;
+  width: 120px;
+  position: relative;
+  transform: rotate(45deg);
+}
+
+.cross:before, .cross::after {
+  content: "";
+  position: absolute;
+  background-color: #fff;
+}
+
+.cross:before {
+  left: 56%;
+  width: 12%;
+  height: 100%;
+  margin-left: -15%;
+}
+
+.cross:after {
+  top: 57%;
+  height: 12%;
+  width: 100%;
+  margin-top: -15%;
+}
+
+.restart-button {
+  margin-top: 50px;
+  padding: 10px 20px;
+  font-size: 20px;
+  width: 190px;
+  height: 50px;
+  color: #ffffff;
+  background: radial-gradient(#8164d6, #492f96, #27009D);
+  border: none;
+  border-radius: 32px;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  font-weight: 500;
+}
+
+.restart-button:hover {
+  background-color: #4e04b1;
+  box-shadow: 0 0 10px rgba(107, 3, 244, 0.8);
+} 
+
+.restart-button-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Media Queries */
+
+@media (min-width: 319px) and (max-width: 480px) {
+  .winning-message {
+    font-size: 24px;
+  }
+  
+  .gameboard {
+    width: 300px;
+    height: 300px;
+
+  }
+  
+  .square {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .circle  {
+    height: 60px;
+    width: 60px;
+    border: 8px solid #fff;
+  }
+  
+  .cross  {
+    height: 60px;
+    width: 60px;
+  }
+}
+
+
+@media (min-width: 481px) and (max-width: 1200px) {
+  .winning-message {
+    font-size: 28px;
+  }
+  
+  .gameboard {
+    width: 360px;
+    height: 360px;
+
+  }
+  
+  .square {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .circle  {
+    height: 70px;
+    width: 70px;
+    border: 9px solid #fff;
+  }
+  
+  .cross  {
+    height: 70px;
+    width: 70px;
+  }
+}
+
+
+@media (min-width: 1201px) and (max-width: 1600px) {
+
+  .winning-message {
+    font-size: 30px;
+  }
+  
+  .gameboard {
+    width: 420px;
+    height: 420px;
+
+  }
+  
+  .square {
+    width: 140px;
+    height: 140px;
+  }
+  
+  .circle  {
+    height: 80px;
+    width: 80px;
+    border: 10px solid #fff;
+  }
+  
+  .cross  {
+    height: 80px;
+    width: 80px;
+  }
+}
+
+@media (min-width: 1601px) {
+  .winning-message {
+    font-size: 36px;
+  }
+  
+  .gameboard {
+    width: 600px;
+    height: 600px;
+
+  }
+  
+  .square {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .circle  {
+    height: 120px;
+    width: 120px; 
+    border: 12px solid #fff;
+  }
+  
+  .cross  {
+    height: 120px;
+    width: 120px;
+  }
+}
